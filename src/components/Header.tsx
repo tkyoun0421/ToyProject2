@@ -58,7 +58,7 @@ const Header = () => {
     {
       key: 1,
       to: "/profiles",
-      text: "취미메이트 만나기"
+      text: "취미메이트 만나기기"
     },
     {
       key: 2,
