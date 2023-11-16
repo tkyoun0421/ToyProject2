@@ -133,33 +133,6 @@ const ProfileEditInputWrap = styled.div`
 const ProfileEditButtonWrap = styled.div`
   text-align: center;
 `;
-const ModalStyle: ReactModal.Styles = {
-  overlay: {
-    backgroundColor: " rgba(0, 0, 0, 0.4)",
-    width: "100%",
-    height: "100vh",
-    zIndex: "10",
-    position: "fixed",
-    top: "0",
-    left: "0"
-  },
-  content: {
-    width: "50%",
-    height: "50%",
-
-    zIndex: "100",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-
-    borderRadius: "10px",
-
-    backgroundColor: "white",
-    justifyContent: "center",
-    overflow: "auto"
-  }
-};
 const ProfileEditTagWrap = styled.div`
   margin-bottom: 46px;
   span {
@@ -187,7 +160,7 @@ function Profile() {
     userData?.profileImgUrl
   );
 
-  const { getData, postData, patchData } = useApi();
+  const { patchData } = useApi();
   const { accessToken } = useContext(AuthContext);
   const [isState, setIsState] = useState(false);
   useEffect(() => {
@@ -197,6 +170,7 @@ function Profile() {
           name: name,
           picture: backgroundImageUrl
         });
+        console.log(res);
       };
       함수명();
     }
